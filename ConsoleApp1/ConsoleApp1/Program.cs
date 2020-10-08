@@ -7,19 +7,86 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            while(true)
+            Console.CursorVisible = false;
+            while (true)
             {
-                printWord();
-                printWord();
+                printEat();
+                Console.WriteLine("\n\n");
+                Thread.Sleep(500);
+                printSleep();
+                Console.WriteLine("\n\n");
+                Thread.Sleep(500);
+                printDream();
+                Console.WriteLine("\n\n");
+                Thread.Sleep(500);
+                printCode();
+                Thread.Sleep(3000);
+                Console.Clear();
             }
             
         }
 
-        static void printWord()
+        private static void printCode()
         {
-            Console.CursorVisible = false;
+            string[] wordArray = new string[5];
+            //Thread.Sleep(1000);
+            //Console.Clear();
 
-            //EAT
+            string[] letterC = CLetterArray();
+            string[] letterO = OLetterArray();
+            string[] letterD = DLetterArray();
+            string[] letterE = ELetterArray();
+
+            for (int j = 4; j >= 0; j--)
+            {
+                wordArray[j] = letterC[j] + letterO[j] + letterD[j] + letterE[j];
+
+                Console.WriteLine(wordArray[j]);
+            }
+        }
+
+        private static void printDream()
+        {
+            string[] wordArray = new string[5];
+            //Thread.Sleep(1000);
+            //Console.Clear();
+
+            string[] letterD = DLetterArray();
+            string[] letterR = RLetterArray();
+            string[] letterM = MLetterArray();
+            string[] letterE = ELetterArray();
+            string[] letterA = ALetterArray();
+            for (int j = 4; j >= 0; j--)
+            {
+                wordArray[j] = letterD[j] + letterR[j] + letterE[j] + letterA[j] + letterM[j];
+
+                Console.WriteLine(wordArray[j]);
+            }
+        }
+
+        private static void printSleep()
+        {
+            string[] wordArray = new string[5];
+            //Thread.Sleep(1000);
+            //Console.Clear();
+
+            string[] letterS = SLetterArray();
+            string[] letterL = LLetterArray();
+            string[] letterP = PLetterArray();
+            string[] letterE = ELetterArray();
+
+            for (int j = 4; j >= 0; j--)
+            {
+                wordArray[j] = letterS[j] + letterL[j] + letterE[j] + letterE[j] + letterP[j];
+
+                Console.WriteLine(wordArray[j]);
+            }
+        }
+
+        static void printEat()
+        {
+            
+
             string[] letterE = ELetterArray();
             string[] letterA = ALetterArray();
             string[] letterT = TLetterArray();
@@ -29,66 +96,6 @@ namespace ConsoleApp1
             for (int j = 4; j >= 0; j--)
             {
                 wordArray[j] = letterE[j] + letterA[j] + letterT[j];
-
-                Console.WriteLine(wordArray[j]);
-            }
-
-            Thread.Sleep(1000);
-            Console.Clear();
-            //SLEEP
-            string[] letterS = SLetterArray();
-            string[] letterL = LLetterArray();
-            string[] letterP = PLetterArray();
-
-            for (int j = 4; j >= 0; j--)
-            {
-                wordArray[j] = letterS[j] + letterL[j] + letterE[j] + letterE[j] + letterP[j];
-
-                Console.WriteLine(wordArray[j]);
-            }
-
-            Thread.Sleep(1000);
-            Console.Clear();
-            //DREAM
-            string[] letterD = DLetterArray();
-            string[] letterR = RLetterArray();
-            string[] letterM = MLetterArray();
-            for (int j = 4; j >= 0; j--)
-            {
-                wordArray[j] = letterD[j] + letterR[j] + letterE[j] + letterA[j] + letterM[j];
-
-                Console.WriteLine(wordArray[j]);
-            }
-
-            Thread.Sleep(1000);
-            Console.Clear();
-            //CODE
-            string[] letterC = CLetterArray();
-            string[] letterO = OLetterArray();
-
-            for (int j = 4; j >= 0; j--)
-            {
-                wordArray[j] = letterC[j] + letterO[j] + letterD[j] + letterE[j];
-
-                Console.WriteLine(wordArray[j]);
-            }
-
-            Thread.Sleep(300);
-            Console.Clear();
-            Thread.Sleep(300);
-            for (int j = 4; j >= 0; j--)
-            {
-                wordArray[j] = letterC[j] + letterO[j] + letterD[j] + letterE[j];
-
-                Console.WriteLine(wordArray[j]);
-            }
-
-            Thread.Sleep(300);
-            Console.Clear();
-            Thread.Sleep(300);
-            for (int j = 4; j >= 0; j--)
-            {
-                wordArray[j] = letterC[j] + letterO[j] + letterD[j] + letterE[j];
 
                 Console.WriteLine(wordArray[j]);
             }
