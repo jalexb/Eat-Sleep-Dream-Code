@@ -7,7 +7,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            while(true)
+            {
+                printWord();
+                printWord();
+            }
+            
+        }
 
+        static void printWord()
+        {
             Console.CursorVisible = false;
 
             //EAT
@@ -17,10 +26,10 @@ namespace ConsoleApp1
 
             string[] wordArray = new string[5];
 
-            for(int j = 4; j >= 0; j-- )
+            for (int j = 4; j >= 0; j--)
             {
                 wordArray[j] = letterE[j] + letterA[j] + letterT[j];
-                
+
                 Console.WriteLine(wordArray[j]);
             }
 
@@ -37,7 +46,7 @@ namespace ConsoleApp1
 
                 Console.WriteLine(wordArray[j]);
             }
-            
+
             Thread.Sleep(1000);
             Console.Clear();
             //DREAM
